@@ -1,0 +1,49 @@
+[tool.briefcase]
+project_name = "SUS"
+bundle = "sustoga.usee.tech"
+version = "0.0.1"
+url = "http://www.usee.tech"
+license = "BSD license"
+author = 'Jibo He, Ph.D.'
+author_email = "hejibo@usee.tech"
+
+[tool.briefcase.app.sus]
+formal_name = "SUS"
+description = "SUS - System Usability Scale"
+icon = "src/sus/resources/sus"
+sources = ['src/sus']
+requires = []
+
+
+[tool.briefcase.app.sus.macOS]
+requires = [
+    'toga-cocoa>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.sus.linux]
+requires = [
+    'toga-gtk>=0.3.0.dev20',
+]
+system_requires = [
+    'libgirepository1.0-dev',
+    'libcairo2-dev',
+    'libpango1.0-dev',
+    'libwebkitgtk-3.0-0',
+    'gir1.2-webkit-3.0',
+]
+
+[tool.briefcase.app.sus.windows]
+requires = [
+    'toga-winforms>=0.3.0.dev20',
+]
+
+# Mobile deployments
+[tool.briefcase.app.sus.iOS]
+requires = [
+    'toga-iOS>=0.3.0.dev20',
+]
+
+[tool.briefcase.app.sus.android]
+requires = [
+    'toga-android>=0.3.0.dev20',
+]
